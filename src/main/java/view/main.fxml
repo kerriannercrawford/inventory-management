@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
    <children>
-      <TilePane layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="255.0" />
+      <TilePane layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="255.0">
+         <children>
+            <Label text="Inventory Management System">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></TilePane>
+      <SplitPane dividerPositions="0.5007062146892656" layoutX="36.0" layoutY="52.0" prefHeight="312.0" prefWidth="900.0">
+        <items>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="400">
+               <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color:black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                   <TableView layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
+                       <columns>
+                           <TableColumn text="Part ID" />
+                           <TableColumn text="Part Name" />
+                           <TableColumn text="Inventory Level" />
+                           <TableColumn text="Price / Cost per Unit" />
+                       </columns>
+                   </TableView>
+                 <Label layoutX="17.0" layoutY="29.0" text="Parts">
+                     <font>
+                         <Font name="System Bold" size="12.0" />
+                     </font>
+                 </Label>
+                  <TextField layoutX="248.0" layoutY="16.0" promptText="Search by Part ID or Name" />
+                   <Button layoutX="213.0" layoutY="250.0" text="Add" />
+                   <Button layoutX="269.0" layoutY="250.0" text="Modify" />
+                   <Button layoutX="340.0" layoutY="250.0" text="Delete" />
+               </Pane>
+           </AnchorPane>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="400.0">
+               <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color:black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                   <TableView layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
+                        <columns>
+                            <TableColumn text="Product ID" />
+                            <TableColumn text="Product Name" />
+                            <TableColumn text="Inventory Level" />
+                            <TableColumn text="Price / Cost per Unit" />
+                        </columns>
+                   </TableView>
+                   <Label layoutX="17.0" layoutY="29.0" text="Products">
+                       <font>
+                           <Font name="System Bold" size="12.0" />
+                       </font>
+                   </Label>
+                   <TextField layoutX="248.0" layoutY="16.0" promptText="Search by Product ID or Name" />
+                   <Button layoutX="213.0" layoutY="250.0" text="Add" />
+                   <Button layoutX="269.0" layoutY="250.0" text="Modify" />
+                   <Button layoutX="340.0" layoutY="250.0" text="Delete" />
+               </Pane>
+           </AnchorPane>
+        </items>
+      </SplitPane>
+       <Button layoutX="800" layoutY="366.0" text="Exit" />
    </children>
 </AnchorPane>
