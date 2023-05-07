@@ -1,4 +1,4 @@
-package parts;
+package model.parts;
 
 public abstract class Part {
     private int id;

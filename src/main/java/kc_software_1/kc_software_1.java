@@ -1,4 +1,4 @@
-package com.example.software1;
+package kc_software_1;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,14 +6,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Paths;
 
-public class HelloApplication extends Application {
+public class kc_software_1 extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         System.out.println("Started");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        URL url = Paths.get("./src/main/java/view/main.fxml").toUri().toURL();
+        Scene scene = new Scene(FXMLLoader.load(url), 320, 240);
+        stage.setTitle("Inventory Management System");
         stage.setScene(scene);
         stage.show();
     }

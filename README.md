@@ -1,1 +1,1 @@
-# inventory-management
+# model.inventory-management

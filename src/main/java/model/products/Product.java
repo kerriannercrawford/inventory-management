@@ -1,7 +1,7 @@
-package products;
+package model.products;
 
 import javafx.collections.ObservableList;
-import parts.Part;
+import model.parts.Part;
 
 public class Product {
     private ObservableList<Part> associatedParts;

@@ -1,8 +1,8 @@
-package inventory;
+package model.inventory;
 
 import javafx.collections.ObservableList;
-import parts.Part;
-import products.Product;
+import model.parts.Part;
+import model.products.Product;
 
 public class Inventory {
     static ObservableList<Part> allParts;
