@@ -13,12 +13,12 @@ public class Product {
     private int max;
 
     public Product(int id, String name, double price, int stock, int min, int max) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.stock = stock;
-        this.min = min;
-        this.max = max;
+        this.setId(id);
+        this.setName(name);
+        this.setPrice(price);
+        this.setStock(stock);
+        this.setMax(max);
+        this.setMin(min);
     }
 
     public int getId() {
