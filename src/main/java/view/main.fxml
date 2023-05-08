@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
+<AnchorPane prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
    <children>
       <TilePane layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="255.0">
          <children>
@@ -39,8 +39,8 @@
                      </font>
                  </Label>
                   <TextField fx:id="root_searchPart" layoutX="248.0" layoutY="16.0" onAction="#searchAllParts" promptText="Search by Part ID or Name" />
-                   <Button fx:id="root_addPart" layoutX="213.0" layoutY="250.0" onMouseClicked="#addPart" text="Add" />
-                   <Button fx:id="root_modifyPart" layoutX="269.0" layoutY="250.0" onMouseClicked="#modifyPart" text="Modify" />
+                   <Button fx:id="root_addPart" layoutX="213.0" layoutY="250.0" onMouseClicked="#openAddPartScreen" text="Add" />
+                   <Button fx:id="root_modifyPart" layoutX="269.0" layoutY="250.0" onMouseClicked="#openModifyPartScreen" text="Modify" />
                    <Button fx:id="root_deletePart" layoutX="340.0" layoutY="250.0" onMouseClicked="#deletePart" text="Delete" />
                </Pane>
            </AnchorPane>
@@ -60,13 +60,13 @@
                        </font>
                    </Label>
                    <TextField fx:id="root_searchProduct" layoutX="248.0" layoutY="16.0" onAction="#searchAllProducts" promptText="Search by Product ID or Name" />
-                   <Button fx:id="root_addProduct" layoutX="213.0" layoutY="250.0" onMouseClicked="#addProduct" text="Add" />
-                   <Button fx:id="root_modifyProduct" layoutX="269.0" layoutY="250.0" onMouseClicked="#modifyProduct" text="Modify" />
+                   <Button fx:id="root_addProduct" layoutX="213.0" layoutY="250.0" onMouseClicked="#openAddProductScreen" text="Add" />
+                   <Button fx:id="root_modifyProduct" layoutX="269.0" layoutY="250.0" onMouseClicked="#openModifyProductScreen" text="Modify" />
                    <Button fx:id="root_deleteProduct" layoutX="340.0" layoutY="250.0" onMouseClicked="#deleteProduct" text="Delete" />
                </Pane>
            </AnchorPane>
         </items>
       </SplitPane>
-       <Button fx:id="root_exit" layoutX="800" layoutY="366.0" text="Exit" />
+       <Button fx:id="root_exit" layoutX="800" layoutY="366.0" onMouseClicked="#exit" text="Exit" />
    </children>
 </AnchorPane>

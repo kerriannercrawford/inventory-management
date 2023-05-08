@@ -2,10 +2,23 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -43,13 +56,57 @@ public class Main {
     private TextField root_searchProduct;
 
     @FXML
+    void openAddProductScreen(MouseEvent event) throws IOException {
+        URL url = Paths.get("./src/main/java/view/add-product.fxml").toUri().toURL();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Scene scene = new Scene(FXMLLoader.load(url));
+        stage.setTitle("Add Product");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void openModifyProductScreen(MouseEvent event) throws IOException {
+        URL url = Paths.get("./src/main/java/view/modify-product.fxml").toUri().toURL();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Scene scene = new Scene(FXMLLoader.load(url));
+        stage.setTitle("Modify Product");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void openAddPartScreen(MouseEvent event) throws IOException {
+        URL url = Paths.get("./src/main/java/view/add-part.fxml").toUri().toURL();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Scene scene = new Scene(FXMLLoader.load(url));
+        stage.setTitle("Add Part");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void openModifyPartScreen(MouseEvent event) throws IOException {
+        URL url = Paths.get("./src/main/java/view/modify-part.fxml").toUri().toURL();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Scene scene = new Scene(FXMLLoader.load(url));
+        stage.setTitle("Modify Part");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void addPart(MouseEvent event) {
 
     }
 
     @FXML
     void addProduct(MouseEvent event) {
-
+        System.out.println("successfully added a prod!");
     }
 
     @FXML
@@ -80,6 +137,12 @@ public class Main {
     @FXML
     void searchAllProducts(ActionEvent event) {
 
+    }
+
+    @FXML
+    void exit(MouseEvent event) {
+        System.out.println("Terminating");
+        System.exit(0);
     }
 
 }
