@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
    <children>
       <TilePane layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="255.0">
          <children>
@@ -18,7 +25,7 @@
         <items>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="400">
                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color:black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-                   <TableView layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
+                   <TableView fx:id="root_parts" layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
                        <columns>
                            <TableColumn text="Part ID" />
                            <TableColumn text="Part Name" />
@@ -31,15 +38,15 @@
                          <Font name="System Bold" size="12.0" />
                      </font>
                  </Label>
-                  <TextField layoutX="248.0" layoutY="16.0" promptText="Search by Part ID or Name" />
-                   <Button layoutX="213.0" layoutY="250.0" text="Add" />
-                   <Button layoutX="269.0" layoutY="250.0" text="Modify" />
-                   <Button layoutX="340.0" layoutY="250.0" text="Delete" />
+                  <TextField fx:id="root_searchPart" layoutX="248.0" layoutY="16.0" onAction="#searchAllParts" promptText="Search by Part ID or Name" />
+                   <Button fx:id="root_addPart" layoutX="213.0" layoutY="250.0" onMouseClicked="#addPart" text="Add" />
+                   <Button fx:id="root_modifyPart" layoutX="269.0" layoutY="250.0" onMouseClicked="#modifyPart" text="Modify" />
+                   <Button fx:id="root_deletePart" layoutX="340.0" layoutY="250.0" onMouseClicked="#deletePart" text="Delete" />
                </Pane>
            </AnchorPane>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="400.0">
                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color:black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-                   <TableView layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
+                   <TableView fx:id="root_products" layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
                         <columns>
                             <TableColumn text="Product ID" />
                             <TableColumn text="Product Name" />
@@ -52,14 +59,14 @@
                            <Font name="System Bold" size="12.0" />
                        </font>
                    </Label>
-                   <TextField layoutX="248.0" layoutY="16.0" promptText="Search by Product ID or Name" />
-                   <Button layoutX="213.0" layoutY="250.0" text="Add" />
-                   <Button layoutX="269.0" layoutY="250.0" text="Modify" />
-                   <Button layoutX="340.0" layoutY="250.0" text="Delete" />
+                   <TextField fx:id="root_searchProduct" layoutX="248.0" layoutY="16.0" onAction="#searchAllProducts" promptText="Search by Product ID or Name" />
+                   <Button fx:id="root_addProduct" layoutX="213.0" layoutY="250.0" onMouseClicked="#addProduct" text="Add" />
+                   <Button fx:id="root_modifyProduct" layoutX="269.0" layoutY="250.0" onMouseClicked="#modifyProduct" text="Modify" />
+                   <Button fx:id="root_deleteProduct" layoutX="340.0" layoutY="250.0" onMouseClicked="#deleteProduct" text="Delete" />
                </Pane>
            </AnchorPane>
         </items>
       </SplitPane>
-       <Button layoutX="800" layoutY="366.0" text="Exit" />
+       <Button fx:id="root_exit" layoutX="800" layoutY="366.0" text="Exit" />
    </children>
 </AnchorPane>
