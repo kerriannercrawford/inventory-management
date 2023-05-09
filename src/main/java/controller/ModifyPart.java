@@ -59,7 +59,7 @@ public class ModifyPart {
     private Label modifyPart_sourceLabel;
 
     @FXML
-    void cancel(ActionEvent event) throws IOException {
+    void cancel(MouseEvent event) throws IOException {
         URL url = Paths.get("./src/main/java/view/main.fxml").toUri().toURL();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

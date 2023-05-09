@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.parts.Part;
 
 import java.io.IOException;
 import java.net.URL;
@@ -71,12 +72,25 @@ public class AddPart {
 
     @FXML
     void savePart(MouseEvent event) {
-
+        addPart_source.setVisible(false);
+        System.out.println(addPart_name.getText());
+        System.out.println(addPart_inhouseRadio.isSelected());
     }
 
     @FXML
-    void setPartSource(MouseEvent event) {
+    void setInhousePart() {
+        addPart_outsourcedRadio.setSelected(false);
+        addPart_sourceLabel.setText("Machine ID");
+        addPart_source.setVisible(true);
+        addPart_sourceLabel.setVisible(true);
+    }
 
+    @FXML
+    void setOutsourcedPart() {
+        addPart_inhouseRadio.setSelected(false);
+        addPart_sourceLabel.setText("Company Name");
+        addPart_source.setVisible(true);
+        addPart_sourceLabel.setVisible(true);
     }
 
 }

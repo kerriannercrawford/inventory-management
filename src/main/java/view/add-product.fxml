@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="622.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProduct">
+<AnchorPane prefHeight="622.0" prefWidth="842.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddProduct">
    <children>
       <Pane layoutX="26.0" layoutY="22.0" prefHeight="576.0" prefWidth="793.0">
          <children>
@@ -39,9 +39,9 @@
                   <TableColumn minWidth="0.0" prefWidth="117.0" text="Price/Cost  per unit" />
                </columns>
             </TableView>
-            <Button fx:id="addProduct_addButton" layoutX="608.0" layoutY="253.0" mnemonicParsing="false" onAction="#addPart" onMouseClicked="#addPart" text="Add" />
-            <Button fx:id="addProduct_removePart" layoutX="517.0" layoutY="488.0" mnemonicParsing="false" onAction="#removePart" onMouseClicked="#removePart" text="Remove Associated Part" />
-            <Button fx:id="addProduct_save" layoutX="517.0" layoutY="521.0" mnemonicParsing="false" onAction="#saveProduct" onMouseClicked="#saveProduct" prefHeight="26.0" prefWidth="55.0" text="Save" />
+            <Button fx:id="addProduct_addButton" layoutX="608.0" layoutY="253.0" mnemonicParsing="false" onMouseClicked="#addPart" text="Add" />
+            <Button fx:id="addProduct_removePart" layoutX="517.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#removePart" text="Remove Associated Part" />
+            <Button fx:id="addProduct_save" layoutX="517.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#saveProduct" prefHeight="26.0" prefWidth="55.0" text="Save" />
             <Button fx:id="addProduct_cancel" layoutX="608.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#cancel" text="Cancel" />
             <TableView fx:id="addProduct_parts2" layoutX="370.0" layoutY="300.0" prefHeight="179.0" prefWidth="408.0">
                <columns>

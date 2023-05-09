@@ -131,12 +131,12 @@ public class Main {
 
     @FXML
     void searchAllParts(ActionEvent event) {
-
+        System.out.println("yes! success! search all parts");
     }
 
     @FXML
     void searchAllProducts(ActionEvent event) {
-
+        System.out.println("yes! success! search all products");
     }
 
     @FXML
