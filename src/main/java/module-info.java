@@ -7,4 +7,6 @@ module com.example.software1 {
     exports kc_software_1;
     exports controller;
     opens controller to javafx.fxml;
+    opens model.products to javafx.base;
+    opens model.parts to javafx.base;
 }

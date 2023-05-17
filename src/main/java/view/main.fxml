@@ -27,10 +27,10 @@
                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color:black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                    <TableView fx:id="root_parts" layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
                        <columns>
-                           <TableColumn text="Part ID" />
-                           <TableColumn text="Part Name" />
-                           <TableColumn text="Inventory Level" />
-                           <TableColumn text="Price / Cost per Unit" />
+                           <TableColumn fx:id="root_partIdColumn" text="Part ID" />
+                           <TableColumn fx:id="root_partNameColumn" text="Part Name" />
+                           <TableColumn fx:id="root_partInventoryColumn" text="Inventory Level" />
+                           <TableColumn fx:id="root_partPriceColumn" text="Price / Cost per Unit" />
                        </columns>
                    </TableView>
                  <Label layoutX="17.0" layoutY="29.0" text="Parts">
@@ -38,7 +38,7 @@
                          <Font name="System Bold" size="12.0" />
                      </font>
                  </Label>
-                  <TextField fx:id="root_searchPart" layoutX="248.0" layoutY="16.0" onAction="#searchAllParts" promptText="Search by Part ID or Name" />
+                  <TextField fx:id="root_searchPart" layoutX="248.0" layoutY="16.0" onAction="#searchAllParts" promptText="Search by Part ID or Name" onKeyPressed="#refreshPartSearch" />
                    <Button fx:id="root_addPart" layoutX="213.0" layoutY="250.0" onMouseClicked="#openAddPartScreen" text="Add" />
                    <Button fx:id="root_modifyPart" layoutX="269.0" layoutY="250.0" onMouseClicked="#openModifyPartScreen" text="Modify" />
                    <Button fx:id="root_deletePart" layoutX="340.0" layoutY="250.0" onMouseClicked="#deletePart" text="Delete" />
@@ -48,10 +48,10 @@
                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color:black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                    <TableView fx:id="root_products" layoutX="17.0" layoutY="46.0" prefHeight="198.0" prefWidth="391.0">
                         <columns>
-                            <TableColumn text="Product ID" />
-                            <TableColumn text="Product Name" />
-                            <TableColumn text="Inventory Level" />
-                            <TableColumn text="Price / Cost per Unit" />
+                            <TableColumn fx:id="root_productIdColumn" text="Product ID" />
+                            <TableColumn fx:id="root_productNameColumn" text="Product Name" />
+                            <TableColumn fx:id="root_productInventoryColumn" text="Inventory Level" />
+                            <TableColumn fx:id="root_productCostColumn" text="Price / Cost per Unit" />
                         </columns>
                    </TableView>
                    <Label layoutX="17.0" layoutY="29.0" text="Products">
@@ -59,7 +59,7 @@
                            <Font name="System Bold" size="12.0" />
                        </font>
                    </Label>
-                   <TextField fx:id="root_searchProduct" layoutX="248.0" layoutY="16.0" onAction="#searchAllProducts" promptText="Search by Product ID or Name" />
+                   <TextField fx:id="root_searchProduct" layoutX="248.0" layoutY="16.0" onAction="#searchAllProducts" promptText="Search by Product ID or Name" onKeyPressed="#refreshProductSearch" />
                    <Button fx:id="root_addProduct" layoutX="213.0" layoutY="250.0" onMouseClicked="#openAddProductScreen" text="Add" />
                    <Button fx:id="root_modifyProduct" layoutX="269.0" layoutY="250.0" onMouseClicked="#openModifyProductScreen" text="Modify" />
                    <Button fx:id="root_deleteProduct" layoutX="340.0" layoutY="250.0" onMouseClicked="#deleteProduct" text="Delete" />
